@@ -5,7 +5,8 @@ CXX = c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 CPPFLAGS	= -MMD
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp\
+				TypeGuesser.cpp
 
 
 OBJS = $(SRCS:.cpp=.o)
@@ -28,10 +29,10 @@ re: fclean
 	make all
 
 test:	$(NAME)
-		./$(NAME)
+		./$(NAME) 42.42f
 
 vtest:	$(NAME)
-		valgrind --leak-check=full ./$(NAME)
+		valgrind --leak-check=full ./$(NAME) 42.42f
 
 -include $(DEPS)
 
