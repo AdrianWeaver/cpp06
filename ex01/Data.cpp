@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:05:18 by aweaver           #+#    #+#             */
-/*   Updated: 2023/01/11 12:24:15 by aweaver          ###   ########.fr       */
+/*   Updated: 2023/01/11 13:44:09 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ Data::Data(Data const & source) : _name(source._name), _age(source._age)
 }
 
 Data::Data(std::string name, int age) : _name(name), _age(age)
+{
+}
+
+Data::~Data()
 {
 }
 
