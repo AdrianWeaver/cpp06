@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:12:46 by aweaver           #+#    #+#             */
-/*   Updated: 2022/12/11 15:24:23 by aweaver          ###   ########.fr       */
+/*   Updated: 2023/01/11 16:08:29 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,7 +193,9 @@ void	TypeGuesser::printChar(double value)
 
 void	TypeGuesser::printChar(int value)
 {
-	if (isprint(value))
+	if (value < 0 || value > 255)
+		std::cout << "char: Non displayable." << std::endl;
+	else if (isprint(value))
 		std::cout << "char: " << static_cast<char>(value) << std::endl;
 	else
 		std::cout << "char: Non displayable." << std::endl;
